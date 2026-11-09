@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+airflow_venv/
+.venv/
+
+# Airflow
+airflow/logs/
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/*.db
+airflow/*.sqlite
+airflow/standalone_admin_password.txt
+
+# DuckDB / local warehouse
+*.duckdb
+*.duckdb.wal
+data/warehouse/
+
+# Raw and processed data
+data/raw/
+data/processed/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# dbt generated files
+dbt/*/target/
+dbt/*/dbt_packages/
+dbt/*/logs/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+
+# Agent / local tooling
+.agents/

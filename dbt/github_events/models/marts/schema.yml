@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: mart_github_activity_daily
+    description: "Daily GitHub activity metrics for analytics and dashboards."
+
+    columns:
+      - name: event_date
+        description: "Calendar date of GitHub activity."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_events
+        description: "Total number of GitHub events."
+        data_tests:
+          - not_null
+
+      - name: unique_actors
+        description: "Number of unique GitHub actors."
+        data_tests:
+          - not_null
+
+      - name: unique_repositories
+        description: "Number of unique repositories."
+        data_tests:
+          - not_null

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_github_events
+    description: "Cleaned and structured GitHub public events."
+
+    columns:
+      - name: event_id
+        description: "Unique GitHub event identifier."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: event_type
+        description: "GitHub event type."
+        data_tests:
+          - not_null
+
+      - name: actor_login
+        description: "GitHub username that generated the event."
+        data_tests:
+          - not_null
+
+      - name: repository_name
+        description: "GitHub repository in owner/name format."
+        data_tests:
+          - not_null
+
+      - name: created_at
+        description: "Timestamp when the GitHub event occurred."
+        data_tests:
+          - not_null
