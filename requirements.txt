@@ -4,3 +4,4 @@ pandas
 pyarrow
 dbt-duckdb
 streamlit
+altair
